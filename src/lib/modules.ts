@@ -1,4 +1,4 @@
-import { Home, LineChart, ListChecks, PlusCircle, Radar, Route, ShieldAlert, Sprout, Store, Gavel, type LucideIcon } from 'lucide-react'
+import { Home, LineChart, ListChecks, PlusCircle, Radar, Route, ShieldAlert, Store, Gavel, type LucideIcon } from 'lucide-react'
 
 export interface NavItem {
   to: string
@@ -27,7 +27,6 @@ export const LOCKED: LockedModule[] = [
   { key: 'vessel-watch', to: '/app/vessel-watch', label: 'Vessel Watch', name: 'Vessel Watch', icon: Radar, tagline: 'Flags suspicious vessel activity near catch zones using public vessel-tracking data.' },
   { key: 'logistics', to: '/app/logistics', label: 'Logistics', name: 'Logistics', icon: Route, tagline: 'Matches catches with refrigerated trucks and cold storage nearby.' },
   { key: 'resilience', to: '/app/resilience', label: 'Supply Resilience', name: 'Supply Resilience', icon: ShieldAlert, tagline: 'Alerts when a port, buyer or route goes down and suggests alternatives.' },
-  { key: 'farms', to: '/app/farms', label: 'Farm produce', name: 'Farm produce (LocalRoots)', icon: Sprout, tagline: 'Extends verified tags and price intelligence to farms and produce.' },
 ]
 
 export const lockedByKey = Object.fromEntries(LOCKED.map((m) => [m.key, m])) as Record<string, LockedModule>

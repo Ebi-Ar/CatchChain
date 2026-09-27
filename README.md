@@ -19,7 +19,7 @@ npm run seed         # regenerate prices/catches/listings (deterministic)
 | `/app/catch/new`: Log a catch + QR tag            | `/app/vessel-watch`: Vessel Watch                   |
 | `/app/catches`: My catches                        | `/app/logistics`: Logistics                         |
 | `/app/buyer`: Buyer view + tag lookup / QR scan   | `/app/resilience`: Supply Resilience                |
-| `/trace/:tagId`: public provenance page           | `/app/farms`: Farm produce (LocalRoots)             |
+| `/trace/:tagId`: public provenance page           |                                                     |
 | `/`, `/app`: landing + home dashboard             |                                                     |
 
 ## Deploy (Vercel)

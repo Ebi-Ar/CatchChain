@@ -156,7 +156,7 @@ export default function Landing() {
       <section id="product" className="border-y border-line bg-surface">
         <div className="mx-auto max-w-[1200px] px-4 py-20 sm:px-6">
           <p className="text-[13px] font-semibold tracking-wide text-teal-600 uppercase">What CatchChain does</p>
-          <h2 className="mt-2 max-w-2xl text-[30px] leading-tight font-bold tracking-[-0.025em] text-navy-900 sm:text-[36px]">Prices and provenance today. The operating system for Atlantic food supply next.</h2>
+          <h2 className="mt-2 max-w-2xl text-[30px] leading-tight font-bold tracking-[-0.025em] text-navy-900 sm:text-[36px]">Prices and provenance today. The operating system for Atlantic seafood supply next.</h2>
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {[
               { icon: LineChart, title: 'Price intelligence', body: 'Dock prices by species, port and buyer with trends and a best-offer alert that shows exactly how much more a catch could earn.', stat: '+$340', statLabel: 'on one 400 lb lobster catch (sample)' },
@@ -191,7 +191,7 @@ export default function Landing() {
         <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr] lg:items-center">
           <div>
             <p className="text-[13px] font-semibold tracking-wide text-teal-600 uppercase">Roadmap</p>
-            <h2 className="mt-2 text-[30px] leading-tight font-bold tracking-[-0.025em] text-navy-900 sm:text-[36px]">Four modules live. Five more in development.</h2>
+            <h2 className="mt-2 text-[30px] leading-tight font-bold tracking-[-0.025em] text-navy-900 sm:text-[36px]">Four modules live. Four more in development.</h2>
             <p className="mt-4 text-[15px] leading-relaxed text-ink-3">Market Pulse, Catch Log, Provenance and the Buyer view work end to end on sample data. The rest are designed and previewed in the app, planned for the pilot phase.</p>
             <Button size="lg" className="mt-6" onClick={launch}>
               Launch demo <ArrowRight />

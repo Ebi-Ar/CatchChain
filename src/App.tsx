@@ -15,7 +15,6 @@ const Sell = lazy(() => import('./pages/locked/Sell'))
 const VesselWatch = lazy(() => import('./pages/locked/VesselWatch'))
 const Logistics = lazy(() => import('./pages/locked/Logistics'))
 const Resilience = lazy(() => import('./pages/locked/Resilience'))
-const Farms = lazy(() => import('./pages/locked/Farms'))
 
 function PageFallback() {
   return (
@@ -51,7 +50,6 @@ export default function App() {
           <Route path="vessel-watch" element={<VesselWatch />} />
           <Route path="logistics" element={<Logistics />} />
           <Route path="resilience" element={<Resilience />} />
-          <Route path="farms" element={<Farms />} />
           <Route path="*" element={<NotFound />} />
         </Route>
         <Route path="*" element={<NotFound standalone />} />
