@@ -1,0 +1,121 @@
+@import 'tailwindcss';
+@import 'leaflet/dist/leaflet.css';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --color-navy-950: #061528;
+  --color-navy-900: #0B2545;
+  --color-navy-800: #13315C;
+  --color-navy-700: #1D4373;
+  --color-navy-600: #2E5A8C;
+
+  --color-teal-50: #E8F7F5;
+  --color-teal-100: #C9EEEA;
+  --color-teal-200: #97DDD5;
+  --color-teal-500: #13A89E;
+  --color-teal-600: #0F8E86;
+  --color-teal-700: #0C716B;
+
+  --color-surface: #F7F9FB;
+  --color-line: #E4E9EF;
+  --color-line-strong: #D3DBE4;
+  --color-ink: #0B2545;
+  --color-ink-2: #3E5470;
+  --color-ink-3: #6B7F96;
+  --color-ink-4: #9AAABB;
+
+  --color-verified: #1E9E5A;
+  --color-verified-50: #E8F6EE;
+  --color-pending: #E0A100;
+  --color-pending-50: #FDF6E3;
+  --color-flag: #D64545;
+  --color-flag-50: #FCECEC;
+
+  --radius-card: 12px;
+  --shadow-soft: 0 1px 2px rgba(11, 37, 69, 0.04), 0 1px 1px rgba(11, 37, 69, 0.02);
+  --shadow-pop: 0 12px 32px -8px rgba(11, 37, 69, 0.18), 0 2px 6px rgba(11, 37, 69, 0.06);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-surface text-ink font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  ::selection {
+    @apply bg-teal-100;
+  }
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Leaflet polish */
+.leaflet-container {
+  font-family: var(--font-sans);
+  background: #dfeaf2;
+}
+.leaflet-container a.leaflet-control-attribution-link,
+.leaflet-control-attribution {
+  font-size: 10px;
+}
+.leaflet-tooltip.cc-tip {
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  box-shadow: var(--shadow-pop);
+  padding: 6px 10px;
+  color: var(--color-ink);
+  font-weight: 500;
+}
+.leaflet-tooltip.cc-tip::before {
+  display: none;
+}
+/* keep Leaflet's internal z-indexes from escaping above the sticky header */
+.leaflet-container {
+  isolation: isolate;
+  z-index: 0;
+}
+.leaflet-control-zoom {
+  border: 1px solid var(--color-line) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+  box-shadow: none !important;
+}
+.leaflet-control-zoom a {
+  color: var(--color-ink) !important;
+}
+
+/* skeleton shimmer */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: #eef2f6;
+}
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+  animation: shimmer 1.3s infinite;
+}
